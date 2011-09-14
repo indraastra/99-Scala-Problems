@@ -11,6 +11,11 @@ object Problem3 {
     l( k )
   }
 
+  def kth_recursive[A]( k : Int, l : List[A] ) : A = {
+    if ( k == 0 ) l.head
+    else kth_recursive( k - 1, l.tail )
+  }
+
   def main( args : Array[String] ) {
     assert( kth( 0, List( 0, 1, 2 ) ) == 0, "integer list" )
     assert( kth( 1, List( 1.1, 2.2, 3.3 ) ) == 2.2, "float list" )
