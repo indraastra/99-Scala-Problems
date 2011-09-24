@@ -1,8 +1,9 @@
 package lists
 
-/** Flatten a nested list structure.
+/**
+ * Flatten a nested list structure.
  *
- *  @author rawlatv@gmail.com (Vishal Talwar)
+ * @author rawlatv@gmail.com (Vishal Talwar)
  */
 object Problem7 {
 
@@ -12,8 +13,6 @@ object Problem7 {
     case ( head: List[Any] ) :: rest => flatten1( head ) ::: flatten1( rest )
     case head :: rest                => head :: flatten1( rest )
   }
-  
-  //ls.foldLeft((acc : List[Any], l : List[Any]) => acc ::: l)
 
   def main( args: Array[String] ) {
     val solutions = List( flatten1 _ )
