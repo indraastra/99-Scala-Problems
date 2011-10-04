@@ -2,6 +2,11 @@ package lists
 
 import scala.Either
 
+/**
+ * Modified run-length encoding.
+ *
+ * @author rawlatv@gmail.com (Vishal Talwar)
+ */
 object Problem11 {
 
   def encodeModified1[A]( l : List[A] ) : List[Any] = {
