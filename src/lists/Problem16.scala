@@ -19,7 +19,7 @@ object Problem16 {
   }
 
   def drop2[A]( n: Int, l: List[A] ): List[A] = {
-    def isSkippable(pair : (A, Int)) : Boolean = ( ( pair._2 + 1 ) % n ) == 0 
+    def isSkippable( pair : ( A, Int ) ) : Boolean = ( ( pair._2 + 1 ) % n ) == 0 
     l.zipWithIndex.filterNot( isSkippable ).unzip._1
   }
 
