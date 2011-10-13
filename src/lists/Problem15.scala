@@ -8,11 +8,11 @@ package lists
 object Problem15 {
 
   def duplicateN_1[A]( n: Int, l: List[A] ): List[A] = {
-    Problem12.decode( l.map( x => ( n, x ) ) )
+    Problem12.decode( l.map( ( n, _ ) ) )
   }
 
   def duplicateN_2[A]( n: Int, l: List[A] ): List[A] = {
-    l.flatMap { x => Problem12.repeat( x, n ) }
+    l.flatMap { Problem12.repeat( _, n ) }
   }
 
   def main( args: Array[String] ): Unit = {
@@ -20,7 +20,7 @@ object Problem15 {
     for ( fn <- solutions ) {
       assert( fn( 3, List( 'a, 'b, 'c, 'c, 'd ) ) ==
         List( 'a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd ) )
-      println( "all passed!" )
     }
+    println( "all passed!" )
   }
 }
